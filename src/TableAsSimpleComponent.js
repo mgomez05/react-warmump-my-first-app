@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+// Simple Component
 const TableHeader = () => {
     return (
         <thead>
@@ -11,6 +12,7 @@ const TableHeader = () => {
     )
 }
 
+// Simple Component
 const TableBody = () => {
     return (
         <tbody>
@@ -34,6 +36,7 @@ const TableBody = () => {
     )
 }
 
+// A Class Component (that coincidentally uses simple components)
 class TableAsSimpleComponent extends Component {
     render() {
         return (
