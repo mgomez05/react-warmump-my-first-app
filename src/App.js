@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import TableThatUsesSimpleComponents from './TableAsSimpleComponent'
+import TableThatUsesSimpleComponents from './TableThatUsesSimpleComponents'
 
 class RussApp extends Component {
   render() {
