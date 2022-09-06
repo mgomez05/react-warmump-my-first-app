@@ -26,6 +26,20 @@ class RussApp extends Component {
     ],
   }
 
+  removeCharacter = (index) => {
+    const { characters } = this.state
+
+    this.setState({
+
+      // Set the characters to the same list of characters,
+      // minus the one character whose index matches the <index> 
+      // argument
+      characters: characters.filter((character, i) => {
+        return i !== index
+      }),
+    })
+  }
+
   render() {
 
     return (
