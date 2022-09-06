@@ -37,7 +37,7 @@ const TableBody = () => {
 }
 
 // A Class Component (that coincidentally uses simple components)
-class TableAsSimpleComponent extends Component {
+class TableThatUsesSimpleComponents extends Component {
     render() {
         return (
             <table>
@@ -48,4 +48,4 @@ class TableAsSimpleComponent extends Component {
     }
 }
 
-export default TableAsSimpleComponent
+export default TableThatUsesSimpleComponents
