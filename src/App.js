@@ -2,10 +2,11 @@ import React, {Component} from 'react'
 import TableThatUsesSimpleComponents from './TableThatUsesSimpleComponents'
 
 class RussApp extends Component {
-  render() {
+
+  state = {
 
     // The characters that will be displayed in the table
-    const CHARACTERS = [
+    characters: [
       {
         name: 'Charlie',
         job: 'Janitor'
@@ -22,7 +23,10 @@ class RussApp extends Component {
         name: 'Dennis',
         job: 'Bartender',
       },
-    ]
+    ],
+  }
+
+  render() {
 
     return (
       <div className="container">
