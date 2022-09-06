@@ -13,9 +13,22 @@ const TableHeader = () => {
 }
 
 // Simple Component
-const TableBody = () => {
+const TableBody = (props) => {
+
+    // Create an array of rows using props 
+    const rows = props.characterData.map((row, index) => {
+
+        return (
+            <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.job}</td>
+            </tr>
+        )
+    })
+
+
     return (
-        <tbody/>
+        <tbody>{rows}</tbody>
     )
 }
 
