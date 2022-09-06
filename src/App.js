@@ -27,7 +27,7 @@ class RussApp extends Component {
     return (
       <div className="container">
         <h1>Hello, React 2!</h1>
-        <TableThatUsesSimpleComponents />
+        <TableThatUsesSimpleComponents characterData={CHARACTERS}/>
       </div>
     )
   }
