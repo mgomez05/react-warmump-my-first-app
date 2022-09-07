@@ -8,7 +8,7 @@ class Form extends Component {
 
     state = this.initialState
 
-    handleChange = () => {
+    handleChange = (event) => {
 
         const { name, value } = event.target 
 
