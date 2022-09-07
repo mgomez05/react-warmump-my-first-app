@@ -33,18 +33,16 @@ const TableBody = (props) => {
 }
 
 // A Class Component (that coincidentally uses simple components)
-class TableThatUsesSimpleComponents extends Component {
-    render() {
+const TableThatUsesSimpleComponents = (props) => {
 
-        const { characterData, removeCharacter } = this.props
+    const { characterData, removeCharacter } = props
 
-        return (
-            <table>
-                <TableHeader />
-                <TableBody characterData={characterData} removeCharacter={removeCharacter}/>
-            </table>
-        )
-    }
+    return (
+        <table>
+            <TableHeader />
+            <TableBody characterData={characterData} removeCharacter={removeCharacter}/>
+        </table>
+    )
 }
 
 export default TableThatUsesSimpleComponents
