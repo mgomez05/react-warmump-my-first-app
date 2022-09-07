@@ -6,5 +6,15 @@ class Form extends Component {
         job: '',
     }
 
-    state this.initialState
+    state = this.initialState
+
+    handleChange = () => {
+
+        const { name, value } = event.target 
+
+        this.setState({
+            [name]: value
+        })
+    }
+
 }
