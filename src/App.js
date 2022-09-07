@@ -42,10 +42,12 @@ class RussApp extends Component {
 
   render() {
 
+    const { characters } = this.state
+
     return (
       <div className="container">
         <h1>Hello, React 2!</h1>
-        <TableThatUsesSimpleComponents characterData={CHARACTERS}/>
+        <TableThatUsesSimpleComponents characterData={characters} removeCharacter={this.removeCharacter}/>
       </div>
     )
   }
