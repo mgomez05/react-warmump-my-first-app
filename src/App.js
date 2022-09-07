@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import TableThatUsesSimpleComponents from './TableThatUsesSimpleComponents'
+import Form from './Form'
 
 class RussApp extends Component {
 
@@ -48,6 +49,7 @@ class RussApp extends Component {
       <div className="container">
         <h1>Hello, React 2!</h1>
         <TableThatUsesSimpleComponents characterData={characters} removeCharacter={this.removeCharacter}/>
+        <Form />
       </div>
     )
   }
