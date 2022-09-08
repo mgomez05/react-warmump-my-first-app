@@ -10,6 +10,16 @@ class RussApp extends Component {
     // is inserted into the html page
     componentDidMount() {
 
+        const url = 'https://en.wikipedia.org/w/api.php?action=opensearch&search=Seona+Dancing&format=json&origin=*'
+
+        // Make a GET request and set the json data to the 'data' attribute of the page's state
+        fetch(url)
+            .then((result) => result.json())
+            .then((result) => {
+                this.setState({
+                    data: result,
+                })
+            })
     }
 
     render() {
