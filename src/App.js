@@ -27,6 +27,7 @@ class RussApp extends Component {
     ],
   }
 
+  // Removes a character from the table
   removeCharacter = (index) => {
     const { characters } = this.state
 
@@ -41,6 +42,20 @@ class RussApp extends Component {
     })
   }
 
+  // Allows us to submit a new character to the table 
+  handleSubmit = (character) => {
+
+    console.log("Calling handleSubmit() with")
+    // Add the character to the list of elements 
+    // in the character array attribute
+    // - The ellipsis tells JS to 
+    //   replace the array with each of the elements
+    //   of the array
+    this.setState(
+      { characters: [...this.state.characters, character]} )
+    }
+    
+
   render() {
 
     const { characters } = this.state
@@ -49,7 +64,7 @@ class RussApp extends Component {
       <div className="container">
         <h1>Hello, React 2!</h1>
         <TableThatUsesSimpleComponents characterData={characters} removeCharacter={this.removeCharacter}/>
-        <Form />
+        <Form handleSubmit={this.handleSubmit}/>
       </div>
     )
   }
