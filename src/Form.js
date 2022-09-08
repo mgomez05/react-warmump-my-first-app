@@ -17,6 +17,16 @@ class Form extends Component {
         })
     }
 
+    submitForm = () => {
+        
+        // Add the character to the table 
+        // by changing RussApp's characters attribute
+        this.props.handleSubmit(this.state)
+
+        // Clear the form after adding the character
+        // to the table
+        this.setState(this.initialState)
+    }
     
     render() {
 
@@ -38,7 +48,9 @@ class Form extends Component {
                        value={job}
                        onChange={this.handleChange} />
 
+                <input type="button" value="Submit" onClick={this.submitForm} />
             </form>
+
         );
     }
 }
